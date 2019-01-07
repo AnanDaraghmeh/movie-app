@@ -1,0 +1,183 @@
+
+body{
+    animation: slide-down 500ms;
+}
+
+#popular-movies{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.img-wrapper{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.img-wrapper img{
+    width:100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.container{
+    position: relative;
+    transition: all 1000ms;
+    animation: scale-up 500ms ease-in;
+    margin: 0.5rem;
+    border-radius: 10px;
+    
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #E4572E;
+    opacity: 0;
+    border-radius: 10px;
+    transition: all 1000ms;
+    
+}
+.overlay h2{
+    position: absolute;
+    left: 5%;
+    bottom: 25%;
+}
+.overlay p:nth-of-type(1) {
+    position: absolute;
+    left: 5%;
+    bottom: 15%;
+}
+.overlay p:nth-of-type(2) {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+}
+/* media query to show the movie overlay on hover on larger screens */
+@media (min-width:768px){
+    .container:hover .overlay{
+        opacity: 1;
+        
+    }
+    .container:hover img{
+        filter: grayscale(50%);
+    }
+    .container:hover{
+        box-shadow: 4px 4px 10px gray;
+        transform: translateY(-10px);
+        cursor: pointer;
+    }
+    .overlay:hover h2 {
+        animation: slide-down ease-in 800ms;
+    }
+    .overlay:hover p {
+        animation: slide-down ease-in 500ms;
+    }
+}
+/* the same hover effects to be handeled with js scroll */
+.grayscaled-img{
+    filter: grayscale(50%);
+}
+.shadowed-container{
+    box-shadow: 4px 4px 10px gray;
+    transform: translateY(-10px);
+}
+.sliding-header {
+    animation: slide-down ease-in 800ms;
+}
+.sliding-text {
+    animation: slide-down ease-in 500ms;
+}
+
+@keyframes scale-up {
+    0%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slide-down {
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media (min-width:768px){
+    .container{
+        width: 45%;
+    }
+   
+}
+@media (min-width:920px){
+    .container{
+        width:30%;
+    }
+}
+@media (min-width:1200px){
+    .container{
+        width:20%;
+    }
+}
+
+.blur{
+    filter: blur(10px) grayscale(50%) brightness(50%);
+}
+
+section h1 {
+    color: #E4572E;
+    text-align: center;
+    margin-top: 2rem;
+    background: #2E282A;
+    padding: 1rem;
+    
+}
+
+/* random movie div */
+#random-movie{
+    padding: 1rem;
+    background: #2E282A;
+    color: #E4572E;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px black;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    text-align: center;
+    display: none;
+    animation: show-dice 2s ease-in both;
+}
+.fa-dice-six{
+    transform: scale(3);
+    margin-right: 1.2rem;
+    margin-left: 0.2rem;
+}
+#random-movie:hover{
+    cursor: pointer;
+}
+#random-movie:active{
+   background: #E4572E;
+   color: #2E282A;
+}
+
+@keyframes show-dice {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
