@@ -7,4 +7,9 @@ $('#toggler').on('click', (e)=>{
     $('.brand').toggleClass('invisible');
 })
 
+// service worker
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+  
 });
