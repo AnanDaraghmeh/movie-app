@@ -6,19 +6,19 @@
     "theme_color": "#E4572E",
     "icons": [
         {
-        "src": "favicon.ico",
+        "src": "favicon.png",
         "size": "192x192",
-        "type":"image/x-icon"
+        "type":"image/png"
         },
         {
-        "src": "favicon.ico",
+        "src": "favicon.png",
         "size": "256x256",
-        "type":"image/x-icon"
+        "type":"image/png"
         },
         {
-        "src": "favicon.ico",
+        "src": "favicon.png",
         "size": "512x512",
-        "type":"image/x-icon"
+        "type":"image/png"
         }
     ],
     "display": "standalone"
