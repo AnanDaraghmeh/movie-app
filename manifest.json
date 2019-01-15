@@ -1,0 +1,16 @@
+{
+    "name": "The Movie App",
+    "short_name": "Movie App",
+    "description": "Check the most popular movies and search for any movie to get detailed information about it",
+    "start_url": "index.html",
+    "background_color": "#2E282A",
+    "theme_color": "#E4572E",
+    "icons": [
+        {
+        "src": "favicon.png",
+        "type":"image/png"
+        }
+    ],
+    "display": "standalone"
+
+}
