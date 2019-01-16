@@ -9,9 +9,8 @@ $('#toggler').on('click', (e)=>{
 
 // service worker
 if (navigator.serviceWorker.controller) {
-    console.log('[PWA Builder] active service worker found, no need to register')
+    console.log('active service worker found, no need to register')
   } else {
-    //Register the ServiceWorker
     navigator.serviceWorker.register('../sw.js', {
       scope: './'
     }).then(function(reg) {
