@@ -181,3 +181,14 @@ section h1 {
         transform: translateY(0px);
     }
 }
+
+/* input search icon */
+.input-wrapper {
+    position: relative;
+}
+.input-wrapper .fa-search {
+    position: absolute;
+    top: 25%;
+    left:10%;
+    color: #E4572E;
+}
