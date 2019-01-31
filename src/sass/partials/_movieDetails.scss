@@ -4,6 +4,7 @@
     grid-template-columns: 1fr;
     align-items: flex-start;
     transition: all 500ms;
+    min-height: 100vh;
 
     @include atMedium {
         grid-template-columns: 1fr 1fr;
@@ -20,10 +21,10 @@
         padding: 0.3rem;
         font-size: 0.8rem;
         font-weight: bold;
-        background: #E4572E;
-        color: #2E282A;
+        background: $orange;
+        color: $brown;
         text-transform: uppercase;
-        border: 1px solid #2E282A;
+        border: 1px solid $brown;
         border-radius: 10px;
         text-align: center;
     }
@@ -36,7 +37,7 @@
         margin-left: 0.3rem;
     }
     &_overview{
-        background: #EFF2EF;
+        background: $white;
         padding: 0.5rem;
         border-radius: 5px;
     }
@@ -65,12 +66,12 @@
         border: none;
         outline: none;
         padding: 0.5rem 1rem;
-        background: #E4572E;
-        color: #2E282A;
+        background: $orange;
+        color: $brown;
         text-transform: uppercase;
         font-weight: bold;
         border-radius: 10px;
-        border: 1px solid #2E282A;
+        border: 1px solid $brown;
         transition: all 500ms;
         text-align: center;
         display: inline-block;
@@ -79,8 +80,8 @@
             cursor: pointer;
         }
         &:active{
-            background: #2E282A;
-            color: #E4572E;
+            background: $brown;
+            color: $orange;
         }
     }
     &_intro{
@@ -96,8 +97,8 @@
 
 
 .movieCast{
-    background: #2E282A;
-    color: #E4572E;
+    background: $brown;
+    color: $orange;
     padding: 0.5rem;
     margin-top: 0;
     margin-bottom: 1px;
@@ -138,8 +139,8 @@
     outline: none;
     padding: 0.5rem 1rem;
     display: block;
-    background: #2E282A;
-    color: #E4572E;
+    background: $brown;
+    color: $orange;
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
@@ -153,8 +154,8 @@
         transform: translateX(-5px);
     }
     &:active{
-        background: #E4572E;
-        color: #2E282A;
+        background: $orange;
+        color: $brown;
     }
     & i {
         transition: all 250ms;

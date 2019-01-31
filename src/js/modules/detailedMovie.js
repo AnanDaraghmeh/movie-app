@@ -1,6 +1,5 @@
 function getDetailedMovie (item){
     return `
-    <div class="spinner"></div>
     <div class="detailedMovie_intro">
         <div class="detailedMovie_header"><h1 class="detailedMovie_title">${item.title}</h1><span class="detailedMovie_rating"><i class="fas fa-star"></i> ${item.vote_average}</span><span class="detailedMovie_runtime"><i class="fas fa-video"></i> ${item.runtime} minutes</span></div>
         <h2 class="detailedMovie_tagline">${item.tagline}</h2>

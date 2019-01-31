@@ -37,7 +37,7 @@ function generateSearchList(userInput){
     request.done(data => {
     console.log(data)  
     const movies = data.results;
-    $('#search-list').show();
+    $('#search-list').slideDown();
     $('.popMoviesSection').addClass('js-blur');
     movies.forEach(movie =>{
         $('#search-list').prepend(createSearchListMovieCard(movie));
@@ -72,7 +72,6 @@ $(function(){
         method: 'GET',
         url: 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=779479719b2b6731a683844365cd9f0c'
     }).done(data=>{
-        $('#popular-movies').html(`<div class="spinner"></div>`);
         let movies = data.results;
         movies.forEach(movie=>{
             $('#popular-movies').prepend(createPopMovieCard(movie));
@@ -117,10 +116,6 @@ setTimeout(showRandomMovieDiv, 15000);
 
 // attach event handeler to the div
 $('#random-movie').on('click', getRandomMovie);
-
-
-
-
 
 
 
