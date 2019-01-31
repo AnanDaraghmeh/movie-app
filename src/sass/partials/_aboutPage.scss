@@ -1,0 +1,82 @@
+.credits{
+    padding: 1rem;
+    width: 83%;
+    margin: 0 auto;
+    padding-top: 0;
+
+    &_title{
+        background: $brown;
+        padding: 1rem;
+        border-radius: 10px;
+        color: $orange;
+    }
+    
+    &_text{
+        padding-left: 0.5rem;
+    }
+}
+
+.contactForm{
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+    
+    &_body{
+        border-radius: 10px;
+        border: 1px solid $brown;
+    }
+
+    &_title{
+        padding: 0.5rem;
+        text-align: left;
+        color: $brown;
+        font-weight: bold;
+    }
+
+    &_group{
+        margin-top:0.5rem;
+        margin-bottom: 0.5rem;
+        & input, & textarea{
+            border:none;
+            outline: none;
+            border-radius: 10px;
+            padding: 1rem;
+            background: $brown;
+            border-left: 3px solid $brown;
+            color: $orange;
+            font-family: inherit;
+            width: 100%;
+            transition: all 250ms;
+            &:focus{
+                border-left: 4px solid $orange;
+            }
+        }
+        & textarea{
+            resize: vertical;
+        }
+    }
+
+    &_btn{
+        border: none;
+        outline: none;
+        padding: 0.5rem 1rem;
+        background: $orange;
+        color: $brown;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 1px solid $brown;
+        transition: all 500ms;
+        text-align: center;
+        margin-top: 0.2rem;
+        width: 50%;
+        &:hover{
+            cursor: pointer;
+        }
+        &:active{
+            cursor: pointer;
+            background: $green;
+            color: $brown;
+        }
+    }
+}

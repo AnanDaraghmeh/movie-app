@@ -1,0 +1,110 @@
+.header{
+    background: $orange;
+    color: $brown;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.sideMenu {
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: -200px;
+    background-color: $brown;
+    width: 200px;
+    color:$orange;
+    transition: all 500ms;
+
+    &_link {
+        color:$orange;
+        display: block;
+        text-transform: uppercase;
+        padding: 1rem;
+        font-size: 1rem;
+        &-selected{
+            background: $light-brown;
+        }
+    }
+    &_title {
+        text-transform: uppercase;
+        padding: 1rem;
+        margin: 0;
+    }
+    &.js-open{
+        left: 0;
+    }
+    @include atLarge {
+        display: none;
+    }
+}
+
+.js-moveToRight{
+    margin-left: 200px;
+}
+
+.toggler{
+
+    &:hover{
+        cursor: pointer; 
+    }
+    @include atLarge {
+        display: none;
+    }
+}
+
+.navMenu{
+    display: none;
+
+    &_link{
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $brown;
+        margin-right: 1rem;
+        display: inline-block;
+        transition: all 250ms;
+        &:hover{
+            border-bottom: 2px solid $brown;
+        }
+        &:active{
+            transform: scale(0.9);
+        }
+        &-selected{
+            border-bottom: 2px solid $brown;
+        }
+    }
+
+    @include atLarge {
+        display: block;
+    }
+}
+
+
+.brand{
+    transition: all 500ms;
+    &.js-invisible{
+        opacity: 0;
+        transform: translateX(200px);
+        font-size: 1px;
+    }
+
+    &_title{
+        color: $brown;
+        font-weight: bold;
+    }
+
+    &_logo{
+        width: 3rem;
+        height: 2rem;
+        display: inline-block;
+        transform: translateY(7px);
+        background: url('../images/film.png');
+        background-size: cover;
+        animation: loop 2000ms both infinite;
+        animation: loop 100s ease-in-out 100ms infinite alternate both;
+    }
+}

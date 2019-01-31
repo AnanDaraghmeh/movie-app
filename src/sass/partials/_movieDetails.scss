@@ -1,0 +1,178 @@
+#details-page{
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    transition: all 500ms;
+
+    @include atMedium {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1rem;
+    }
+}
+.detailedMovie{
+    &_header{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &_rating, &_runtime{
+        padding: 0.3rem;
+        font-size: 0.8rem;
+        font-weight: bold;
+        background: #E4572E;
+        color: #2E282A;
+        text-transform: uppercase;
+        border: 1px solid #2E282A;
+        border-radius: 10px;
+        text-align: center;
+    }
+    &_rating{
+        width: 15%;
+        margin-left: 1rem;
+    }
+    &_runtime{
+        width: 25%;
+        margin-left: 0.3rem;
+    }
+    &_overview{
+        background: #EFF2EF;
+        padding: 0.5rem;
+        border-radius: 5px;
+    }
+    &_tagline{
+        color: rgb(73, 7, 29);
+        margin-top: 0;
+    }
+    &_poster{
+        width: 100%;
+        max-width: 100%;
+        animation: slide-down 3000ms;
+        border-radius: 10px;
+    }
+    &_genres, &_releaseDate, &_languages, &_adultContent, &_director{
+        background: lightslategray;
+        padding: 0.5rem;
+        margin-top: 0;
+        margin-bottom: 1px;
+        border-radius: 5px;
+    }
+    &_homepage{
+        margin-bottom: 0;
+        margin-top: 0.5rem;
+    }
+    &_homepageLink, &_youtubeLink, &_addToWatchListButton {
+        border: none;
+        outline: none;
+        padding: 0.5rem 1rem;
+        background: #E4572E;
+        color: #2E282A;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 1px solid #2E282A;
+        transition: all 500ms;
+        text-align: center;
+        display: inline-block;
+        margin-top: 0.2rem;
+        &:hover{
+            cursor: pointer;
+        }
+        &:active{
+            background: #2E282A;
+            color: #E4572E;
+        }
+    }
+    &_intro{
+        position: relative;
+    }
+    &_youtubeLink{
+        position: absolute;
+        left: 1%;
+        bottom: 1%;
+    }
+}
+
+
+
+.movieCast{
+    background: #2E282A;
+    color: #E4572E;
+    padding: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 1px;
+    border-radius: 5px;
+
+    & p{
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+    & h5{
+        margin:0;
+    }
+
+    &_wrapper{
+        display: flex;
+        justify-content: space-around;
+    }
+    &_item{
+        text-align: center;
+        width: 30%;
+        animation: scale-up 3000ms;
+        cursor: pointer;
+    }
+    &_image{
+        width:100%;
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+/* back btn */
+.btn-back{
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    background: #2E282A;
+    color: #E4572E;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 1rem;
+    transition: all 250ms;
+    &:hover{
+        cursor: pointer;
+    }
+    &:hover i {
+        transform: translateX(-5px);
+    }
+    &:active{
+        background: #E4572E;
+        color: #2E282A;
+    }
+    & i {
+        transition: all 250ms;
+    }
+}
+
+
+/* added to watchlist msg */
+.msg-added{
+    background: $green;
+    padding: 1rem;
+    position: fixed;
+    left:10%;
+    top: 50%;
+    z-index: 20;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px black;
+    color: white;
+    display: none;
+    animation: msg-added 2500ms forwards;
+}

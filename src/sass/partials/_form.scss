@@ -1,0 +1,48 @@
+.searchForm {
+    margin-top: 1rem;
+    position: relative;
+
+    &_searchField{
+        display: block;
+        border: none;
+        border-bottom: 2px solid $brown;
+        padding: 0.5rem 0.1rem;
+        padding-left: 1.5rem;
+        width: 80%;
+        max-width:80%;
+        margin: 0 auto;
+        background: $white;
+        color: $orange;
+        font-weight: bold;
+        outline: none;
+        transition: all 500ms;
+        &:focus{
+            border-bottom: 2px solid $orange;
+        }
+    }
+
+    &_searchList{
+        list-style: none;
+        background: $brown;
+        color: $orange;
+        width: 80%;
+        max-width: 80%;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        position: absolute;
+        left: 10%;
+        top:110%;
+        z-index: 10;
+        border-radius: 5px;
+        padding: 0;
+    }
+    &_searchFieldWrapper{
+        position: relative;
+    }
+    &_searchIcon{
+        position: absolute;
+        top: 25%;
+        left:10%;
+        color: $orange;
+    }
+}

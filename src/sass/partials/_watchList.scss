@@ -1,0 +1,59 @@
+.watchlistMovie{
+    display: flex;
+    background: #2E282A;
+    color: #E4572E;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem;
+    animation: scale-up 500ms;
+    transition: all 500ms;
+    &_image{
+        width:75px;
+        height: 100px;
+        border-radius: 10px;
+        margin-right: 1rem;
+    }
+    &.js-remove{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+
+
+#remove-btn, #show-details{
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    background: #E4572E;
+    color: #2E282A;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid #2E282A;;
+    text-align: center;
+    display: inline-block;
+    margin-top: 0.2rem;
+    transition: all 200ms;
+}
+#remove-btn:hover, #show-details:hover{
+    cursor: pointer;
+}
+#remove-btn:active{
+    background:crimson;
+    transform: scale(0.9);
+}
+#show-details:active{
+    background: #2E282A;
+    color: #E4572E;
+    border: 1px solid #E4572E;
+    transform: scale(0.9);
+}
+
+
+
+.watchlist-empty{
+    padding: 1rem;
+    margin-top: 1rem;
+    color: #2E282A;
+}
