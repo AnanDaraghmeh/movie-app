@@ -13,11 +13,12 @@
     position: fixed;
     top:0;
     bottom: 0;
-    left: -200px;
+    left: -250px;
     background-color: $brown;
-    width: 200px;
+    width: 250px;
     color:$orange;
     transition: all 500ms;
+    z-index: 100;
 
     &_link {
         color:$orange;
@@ -42,9 +43,6 @@
     }
 }
 
-.js-moveToRight{
-    margin-left: 200px;
-}
 
 .toggler{
 
