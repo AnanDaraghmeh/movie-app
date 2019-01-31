@@ -88,8 +88,7 @@
     transition: all 500ms;
     &.js-invisible{
         opacity: 0;
-        transform: translateX(200px);
-        font-size: 1px;
+        font-size: .5rem;
     }
 
     &_title{
