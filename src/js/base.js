@@ -2,16 +2,16 @@ import $ from 'jquery';
 
 //toggler
 $('#toggler').on('click', (e)=>{
-    $('#nav-menu').toggleClass('js-open');
-    $('.brand').toggleClass('js-invisible');
+    $('.sideMenu-wrapper').fadeIn();
+    $('#nav-menu').addClass('js-open');
+    $('.brand').addClass('js-invisible');
 });
 
 //closing the side menu
-$('html').on('click', (e)=>{
-    if (!e.target.classList.contains('toggler') && !e.target.classList.contains('sideMenu') && !e.target.classList.contains('sideMenu_link')){
-        $('.sideMenu').removeClass('js-open');
-        $('.brand').toggleClass('js-invisible');
-    }
+$('.sideMenu-wrapper').on('click', (e)=>{
+    $('.sideMenu-wrapper').fadeOut();
+    $('.sideMenu').removeClass('js-open');
+    $('.brand').removeClass('js-invisible');
 });
 
 // spinner
