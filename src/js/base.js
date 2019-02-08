@@ -2,16 +2,19 @@ import $ from 'jquery';
 
 //toggler
 $('#toggler').on('click', (e)=>{
-    $('.sideMenu-wrapper').fadeIn();
+    $('.sideMenu-wrapper').slideDown();
     $('#nav-menu').addClass('js-open');
     $('.brand').addClass('js-invisible');
 });
 
 //closing the side menu
 $('.sideMenu-wrapper').on('click', (e)=>{
-    $('.sideMenu-wrapper').fadeOut();
-    $('.sideMenu').removeClass('js-open');
-    $('.brand').removeClass('js-invisible');
+    if (!e.target.classList.contains('sideMenu')){
+        $('.sideMenu-wrapper').slideUp();
+        $('.sideMenu').removeClass('js-open');
+        $('.brand').removeClass('js-invisible');
+    }
+    
 });
 
 // spinner
